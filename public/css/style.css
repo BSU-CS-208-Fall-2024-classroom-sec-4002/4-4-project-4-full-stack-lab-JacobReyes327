@@ -1,3 +1,19 @@
 body{
-    background-color: hotpink;
+    background-color: rgb(213, 62, 188);
+    font-family: sans-serif;
+    text-align: center;
 }
+
+div{
+    display: inline;
+}
+
+h2, ul{
+    text-align: left;
+}
+
+ul input {
+    text-decoration-line: underline;
+}
+
+

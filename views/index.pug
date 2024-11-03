@@ -4,5 +4,21 @@ link(rel='stylesheet' href='css/style.css')
 head
     title My First Full Stack
 body
-    h1 Simple TODO APP
-    p TODO: Complete the app!
+    h1 My Simple TODO App
+    form(action='/' method="post")
+        label(for='todo') New TODO: 
+        input#todo(type='text', name='todo')
+        div  &larr; Enter your new task here!
+        br
+        br
+        input(type='submit', value='Create Task')  
+    
+    h2 My TODO List
+    ul
+        - for (let i = 0; i < tasks.length; i++)
+            li= tasks[i].task
+                form(action="/delete" method="post")
+                    input(type="hidden", name="id" value=tasks[i].id)
+                    input(type="submit", value="I Finished This Task!")
+                
+        
